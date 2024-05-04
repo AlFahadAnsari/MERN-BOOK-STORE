@@ -2,11 +2,13 @@ import express from 'express'
 import mongoose from 'mongoose'
 import bookroute from './routes/book.route.js'
 import userRoute from './routes/user.route.js'
+import feedbackRoute from './routes/fedba.route.js'
 import cors from 'cors'
 const app = express();
 
 app.use(cors()) 
 app.use(express.json())
+
 
 
  try {
@@ -22,6 +24,7 @@ app.use(express.json())
 // define router
 app.use('/book',bookroute)
 app.use('/user',userRoute)
+app.use('/feedback',feedbackRoute)
 
 
 
