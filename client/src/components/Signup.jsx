@@ -22,7 +22,7 @@ const Signup = () => {
     password:data.password}
 
 
-   await axios.post('https://mern-book-store-server.vercel.app/user/signup',userInfo)
+   await axios.post('http://localhost:2000/user/signup',userInfo)
     .then((res)=>{
       console.log(res.data);
       if(res.data){
