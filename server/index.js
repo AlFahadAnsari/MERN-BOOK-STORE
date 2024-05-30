@@ -6,7 +6,15 @@ import feedbackRoute from './routes/fedba.route.js'
 import cors from 'cors'
 const app = express();
 
-app.use(cors()) 
+
+
+app.use(cors(
+    {
+        origin: ["https://mern-book-store-client-mu.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 app.use(express.json())
 
 

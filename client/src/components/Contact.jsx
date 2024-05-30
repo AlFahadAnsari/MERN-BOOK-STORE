@@ -49,7 +49,7 @@ const Contact = () => {
                
     
     
-                <h3 className="font-bold text-lg">Signup</h3>
+                <h3 className="font-bold text-lg">Feedback</h3>
     
     
     
