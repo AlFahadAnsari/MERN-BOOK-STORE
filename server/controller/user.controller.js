@@ -11,7 +11,7 @@ export let signup = async (req, res) => {
             return res.status(400).json({ message: "User already exists" });
         }
 
-        let HasPassword = await bycript.hash(password, 10)
+        let HasPassword = await bycript.hash(password, 12)
         let Createuser = new User({
             fullname: fullname,
             email: email,
