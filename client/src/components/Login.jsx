@@ -20,7 +20,7 @@ const Login = ({ setIsLoggedIn }) => {
         };
         
         try {
-            const res = await axios.post('http://localhost:2000/user/login', userInfo);
+            const res = await axios.post('https://server-three-cyan.vercel.app/user/login', userInfo);
             if (res.data && res.data.user) {
                 toast.success('Login Successfully!');
                 localStorage.setItem("User", JSON.stringify(res.data.user));
