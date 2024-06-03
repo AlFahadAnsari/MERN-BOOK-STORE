@@ -22,7 +22,7 @@ const Signup = () => {
     password:data.password}
 
 
-   await axios.post('http://localhost:2000/user/signup',userInfo)
+   await axios.post('https://server-three-cyan.vercel.app/user/signup',userInfo)
     .then((res)=>{
       console.log(res.data);
       if(res.data){
