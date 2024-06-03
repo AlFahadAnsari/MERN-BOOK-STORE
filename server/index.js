@@ -6,18 +6,8 @@ import feedbackRoute from './routes/fedba.route.js'
 import cors from 'cors'
 const app = express();
 
-
-
-app.use(cors(
-    {
-        origin: ["https://mern-book-store-client-mu.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+app.use(cors())
 app.use(express.json())
-
-
 
  try {
   mongoose.connect("mongodb+srv://ansari:alfahad@bookstoreproject.bwfbzuz.mongodb.net/booksStore")
@@ -28,15 +18,10 @@ app.use(express.json())
 
 
 
-
 // define router
 app.use('/book',bookroute)
 app.use('/user',userRoute)
 app.use('/feedback',feedbackRoute)
-
-
-
-
 
 
 app.get('/',(req,res)=>{
