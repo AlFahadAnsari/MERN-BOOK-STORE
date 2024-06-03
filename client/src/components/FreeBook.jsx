@@ -15,7 +15,7 @@ const FreeBook = () => {
 
       const getBook = async () => {
           try {
-              const res = await axios.get("http://localhost:2000/book");
+              const res = await axios.get("https://server-three-cyan.vercel.app/book");
               let data = res.data.filter((e) => e.catogry === "free")
               setBook(data);
           } catch (error) {
