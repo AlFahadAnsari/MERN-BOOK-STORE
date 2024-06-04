@@ -23,7 +23,7 @@ const Contact = () => {
           .then((res)=>{
             console.log(res.data);
             if(res.data){
-              toast.success('feedback add succefull!'); 
+              toast.success('Feedback Add Successful!'); 
               
               setTimeout(() => {
                   navi('/')
