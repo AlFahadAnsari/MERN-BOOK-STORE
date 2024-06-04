@@ -19,7 +19,7 @@ const Contact = () => {
           email:data.email,
           message:data.message}
 
-          await axios.post('http://localhost:2000/feedback',feedbackdata)
+          await axios.post('https://server-three-cyan.vercel.app/feedback',feedbackdata)
           .then((res)=>{
             console.log(res.data);
             if(res.data){
