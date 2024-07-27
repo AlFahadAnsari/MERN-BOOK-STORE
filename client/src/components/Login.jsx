@@ -36,6 +36,7 @@ const Login = ({ setIsLoggedIn }) => {
         setTimeout(() => {
           setIsLoggedIn(true); // Update login state
           localStorage.setItem("email", data.email); // Ensure `data.email` is used
+          window.location.reload()
           navigate("/");
           reset();
         }, 2000);
